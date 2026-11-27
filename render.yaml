@@ -3,13 +3,19 @@ services:
     name: buy-and-sell-api
     runtime: node
     rootDir: Ebay/backend
-    plan: free
+    plan: starter
     buildCommand: npm install
     startCommand: npm start
     healthCheckPath: /health
+    disk:
+      name: uploads
+      mountPath: /var/uploads
+      sizeGB: 1
     envVars:
       - key: NODE_VERSION
         value: 20.11.1
+      - key: UPLOAD_DIR
+        value: /var/uploads
       - key: MONGODB_URI
         sync: false
       - key: JWT_SECRET
