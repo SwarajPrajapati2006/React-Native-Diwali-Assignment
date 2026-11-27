@@ -6,7 +6,7 @@
 
 ---
 
-## 🏗️ Architecture & Structure
+## Architecture & Structure
 
 ```
 Ebay/
@@ -105,7 +105,7 @@ Ebay/
 
 ---
 
-## ⚡ How to Run
+## How to Run
 
 ### Step 1: Start the Backend Server
 ```bash
@@ -141,7 +141,7 @@ npx expo start --web      # Or scan QR code in Expo Go (Android / iOS)
 
 ---
 
-## 🎨 Design System
+##  Design System
 - **Dark Mode**: Premium background `#0B0B0B`, surface `#141414`, surface raised `#1F1F1F`, border `#282828`.
 - **Sage Brand**: Primary accent `#85B38A`, dark sage `#5E8F64`, soft mint `#1A291E`.
 - **Coral Star**: Pledged donation items `#F26B6B`.
