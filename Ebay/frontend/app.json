@@ -1,0 +1,77 @@
+{
+  "expo": {
+    "name": "Buy and Sell",
+    "slug": "buy-and-sell",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "scheme": "campusmarket",
+    "androidStatusBar": {
+      "barStyle": "dark-content",
+      "backgroundColor": "#F3F5F7",
+      "translucent": false
+    },
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1F4E89"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.swaraj.buyandsell",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Allows taking photos of items to create Buy and Sell listings.",
+        "NSPhotoLibraryUsageDescription": "Allows uploading gallery images for marketplace listings.",
+        "NSLocationWhenInUseUsageDescription": "Helps find items near you and sets pickup locations.",
+        "NSContactsUsageDescription": "Allows inviting friends and saving trusted sellers to phone contacts.",
+        "NSFaceIDUsageDescription": "Enables instant biometric login to your Buy and Sell account."
+      }
+    },
+    "android": {
+      "package": "com.swaraj.buyandsell",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1F4E89"
+      },
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "READ_CONTACTS",
+        "WRITE_CONTACTS",
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT",
+        "VIBRATE"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Buy and Sell to use your camera."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Allow Buy and Sell to use your location."
+        }
+      ],
+      [
+        "expo-contacts",
+        {
+          "contactsPermission": "Allow Buy and Sell to access your contacts."
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Allow Buy and Sell to use Face ID."
+        }
+      ]
+    ]
+  }
+}
