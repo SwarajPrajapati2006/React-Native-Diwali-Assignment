@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: buy-and-sell-api
+    runtime: node
+    rootDir: Ebay/backend
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 20.11.1
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
