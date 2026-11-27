@@ -30,7 +30,12 @@ app.use('/api/notifications', require('./routes/notifications'));
 app.use('/api/upload', require('./routes/upload'));
 app.use('/api/categories', require('./routes/categories'));
 
-// Health check / Welcome
+// Health check endpoint (used by Render)
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok', uptime: process.uptime() });
+});
+
+// Welcome / API index
 app.get('/', (req, res) => {
   res.json({
     name: 'eBay Campus Second-Hand Market API',
