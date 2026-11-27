@@ -7,7 +7,12 @@ const Enquiry = require('./models/Enquiry');
 const Notification = require('./models/Notification');
 const Favorite = require('./models/Favorite');
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://Swaraj69:kundan2006@backend.rwe3tsb.mongodb.net/campusmarket?retryWrites=true&w=majority&appName=backend';
+const MONGODB_URI = process.env.MONGODB_URI;
+
+if (!MONGODB_URI) {
+  console.error('[Seed] MONGODB_URI is not defined. Aborting.');
+  process.exit(1);
+}
 
 const seedDatabase = async () => {
   try {
